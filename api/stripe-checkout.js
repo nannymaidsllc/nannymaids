@@ -1,6 +1,5 @@
 const STRIPE_SECRET = process.env.STRIPE_SECRET_KEY;
 const SITE_URL = (process.env.SITE_URL || '').replace(/\/$/, '');
-
 const PRICE_RULES = {
   'Basic Cleaning':        { base: 13000, perBed: 2500, perBath: 2500 },
   'Standard Cleaning':     { base: 17000, perBed: 1500, perBath: 2000 },
@@ -14,7 +13,6 @@ const PRICE_RULES = {
 };
 const ADDON_PRICES = { fridge: 3000, oven: 3000, laundry: 3000, hour: 3000 };
 const CUSTOM_SERVICES = ['Move-In Cleaning', 'Move-Out Cleaning', 'Post-Construction Cleaning'];
-
 function calculateAmount(service, options) {
   const rule = PRICE_RULES[service];
   if (!rule) return null;
@@ -23,8 +21,7 @@ function calculateAmount(service, options) {
   else if (rule.hourly) {
     const hours = Math.max(1, parseInt(options.hours) || 1);
     const children = Math.max(1, parseInt(options.children) || 1);
-    const rate = rule.hourly + (rule.perChild && children > 1 ? rule.perChild * (children - 1) : 0);
-    total = rate * hours;
+    total = (rule.hourly + (rule.perChild && children > 1 ? rule.perChild * (children - 1) : 0)) * hours;
   } else {
     const beds = Math.max(1, parseInt(options.beds) || 1);
     const baths = Math.max(1, parseFloat(options.baths) || 1);
@@ -37,23 +34,18 @@ function calculateAmount(service, options) {
   }
   return total;
 }
-
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  if (!STRIPE_SECRET) return res.status(500).json({ error: 'Payment system not configured. Please contact us at (813) 400-3679.' });
-
+  if (!STRIPE_SECRET) return res.status(500).json({ error: 'Payment system not configured. Call (813) 400-3679.' });
   const { service, options = {}, customerEmail, customerName, bookingRef } = req.body;
   if (!service) return res.status(400).json({ error: 'Service is required' });
-  if (CUSTOM_SERVICES.includes(service)) return res.status(400).json({ error: 'custom', message: 'This service requires a custom quote. We will contact you to arrange payment.' });
-
+  if (CUSTOM_SERVICES.includes(service)) return res.status(400).json({ error: 'custom', message: 'This service requires a custom quote. We will contact you.' });
   const amountCents = calculateAmount(service, options);
-  if (!amountCents || amountCents < 50) return res.status(400).json({ error: 'Could not calculate a valid price. Please go back and check your selections.' });
-
-  const description = [service, options.beds ? `${options.beds} bed` : null, options.baths ? `${options.baths} bath` : null, options.hours ? `${options.hours} hrs` : null, options.addons && options.addons.length ? `+ ${options.addons.join(', ')}` : null].filter(Boolean).join(' | ');
-
+  if (!amountCents || amountCents < 50) return res.status(400).json({ error: 'Could not calculate price. Go back and check your selections.' });
+  const description = [service, options.beds ? `${options.beds} bed` : null, options.baths ? `${options.baths} bath` : null, options.hours ? `${options.hours} hrs` : null].filter(Boolean).join(' | ');
   const params = new URLSearchParams();
   params.append('payment_method_types[]', 'card');
   params.append('line_items[0][price_data][currency]', 'usd');
@@ -68,7 +60,6 @@ module.exports = async (req, res) => {
   params.append('metadata[service]', service);
   params.append('metadata[booking_ref]', bookingRef || '');
   params.append('metadata[customer_name]', customerName || '');
-
   try {
     const stripeRes = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
@@ -76,10 +67,10 @@ module.exports = async (req, res) => {
       body: params.toString(),
     });
     const session = await stripeRes.json();
-    if (!stripeRes.ok) return res.status(500).json({ error: session.error?.message || 'Stripe returned an error.' });
-    if (!session.url) return res.status(500).json({ error: 'No checkout URL returned from Stripe.' });
+    if (!stripeRes.ok) return res.status(500).json({ error: session.error?.message || 'Stripe error.' });
+    if (!session.url) return res.status(500).json({ error: 'No checkout URL from Stripe.' });
     return res.status(200).json({ url: session.url, amount: amountCents, sessionId: session.id });
   } catch (err) {
-    return res.status(502).json({ error: 'Could not reach Stripe. Please try again or call (813) 400-3679.' });
+    return res.status(502).json({ error: 'Could not reach Stripe. Try again or call (813) 400-3679.' });
   }
 };
