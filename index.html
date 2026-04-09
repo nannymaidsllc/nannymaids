@@ -6,6 +6,10 @@
 <title>NannyMaids | Trusted Home Care &mdash; Tampa, FL</title>
 <meta name="description" content="NannyMaids connects Tampa families with trusted, background-checked workers for cleaning, childcare, companion care, Airbnb turnover, and pet care.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 :root{
@@ -274,6 +278,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     <button onclick="showPage('about')">About</button>
     <button onclick="showPage('contact')">Contact</button>
     <button onclick="showPage('review')">Reviews</button>
+      <button onclick="showPage('adminDash')">Admin</button>
     <button onclick="showPage('clientAgreement')">Agreement</button>
     <button class="dn-work" onclick="showPage('worker')">Join Team</button>
     <button class="dn-book" onclick="showPage('booking')">Book Now</button>
@@ -287,6 +292,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
   <button onclick="showPage('about')">About</button>
   <button onclick="showPage('contact')">Contact</button>
   <button onclick="showPage('review')">Reviews</button>
+      <button onclick="showPage('adminDash')">Admin</button>
   <button onclick="showPage('clientAgreement')">Client Agreement</button>
   <button class="mn-book" onclick="showPage('booking')">Book Your Service Now</button>
   <button class="mn-work" onclick="showPage('worker')">Apply to Join Our Team</button>
@@ -413,6 +419,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <button onclick="showPage('clientAgreement')">Client Agreement</button>
       <button onclick="showPage('policy')">Policies</button>
       <button onclick="showPage('review')">Reviews</button>
+      <button onclick="showPage('adminDash')">Admin</button>
     </div>
     <hr>
     <p>&copy; 2026 NannyMaids LLC &bull; Tampa, Florida</p>
@@ -930,20 +937,44 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
   <div class="sec" style="background:linear-gradient(160deg,var(--cream),var(--yellow-l));">
     <div class="stag">Internal - Workers Only</div>
     <div class="sh">Worker <em>Policy</em></div>
+
     <div class="policy-sec pink"><h3>Payment Structure</h3>
-      <div class="policy-row"><div class="pdot">&#10003;</div><p>Workers receive competitive pay per completed job. Payment details shared after approval.</p></div>
-      <div class="policy-row"><div class="pdot">&#10003;</div><p>Paid via Zelle, PayPal, or Cash App after job verification.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>Workers receive <strong>65% of each completed and verified job</strong>.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>NannyMaids retains 35% as a platform coordination fee.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>Payment via <strong>Zelle, PayPal, or Cash App</strong>.</p></div>
     </div>
+
+    <div class="policy-sec yellow"><h3>&#128197; Payment Schedule</h3>
+      <div style="background:white;border-radius:12px;padding:16px;margin-bottom:10px;border:2px solid var(--yellow-d);text-align:center;">
+        <p style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--brown);">Paid Every Friday</p>
+        <p style="font-size:13px;color:var(--gray);margin-top:4px;">All verified jobs from the previous week</p>
+      </div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>Payments are processed <strong>every Friday</strong> for all completed and verified jobs from that week.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>There are <strong>no same-day or instant payouts</strong>. All workers are paid on the weekly Friday schedule.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>Client payments go to the NannyMaids business account first. Worker pay is distributed after verification every Friday.</p></div>
+    </div>
+
+    <div class="policy-sec pink"><h3>Pay Requirements</h3>
+      <p style="font-size:13px;color:var(--brown-l);margin-bottom:10px;">To receive payment that Friday, ALL of the following must be true:</p>
+      <div class="policy-row"><div class="pdot">1</div><p>Job must be <strong>completed</strong>.</p></div>
+      <div class="policy-row"><div class="pdot">2</div><p>Job Completion Form must be <strong>submitted</strong>.</p></div>
+      <div class="policy-row"><div class="pdot">3</div><p>Job must be <strong>verified</strong> by NannyMaids.</p></div>
+      <div style="background:var(--pink-l);border:1.5px solid var(--pink);border-radius:10px;padding:12px;margin-top:8px;"><p style="font-size:13px;font-weight:700;color:var(--pink-d);">Failure to submit the completion form will delay your payment to the following Friday.</p></div>
+    </div>
+
     <div class="policy-sec yellow"><h3>Job Completion</h3>
       <div class="policy-row"><div class="pdot">1</div><p>Submit the Job Completion Form immediately after every job.</p></div>
       <div class="policy-row"><div class="pdot">2</div><p>Text minimum 3 photos to (813) 400-3679 after all cleaning jobs.</p></div>
-      <div class="policy-row"><div class="pdot">3</div><p>Missing form or photos may delay or forfeit payment.</p></div>
+      <div class="policy-row"><div class="pdot">3</div><p>Missing form or photos will delay payment to the following Friday.</p></div>
     </div>
+
     <div class="policy-sec pink"><h3>Conduct &amp; Standards</h3>
-      <div class="policy-row"><div class="pdot">&#10003;</div><p>Clothing clean, appropriate, and presentable.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>Clothing clean, appropriate, and presentable at all times.</p></div>
       <div class="policy-row"><div class="pdot">&#10003;</div><p>Closed-toe shoes required for safety.</p></div>
-      <div class="policy-row"><div class="pdot">&#10003;</div><p>Good hygiene at all times. No direct solicitation of clients.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>Good hygiene at all times.</p></div>
+      <div class="policy-row"><div class="pdot">&#10003;</div><p>No direct solicitation of clients outside the platform.</p></div>
     </div>
+
     <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
       <button class="btn-y" onclick="showPage('jobform')">Submit Job Completion Form</button>
       <button class="btn-o" onclick="showPage('workerAgreement')">View Worker Agreement</button>
@@ -1076,7 +1107,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
 // ── AIRTABLE ──
 function atPost(table, fields, cb) {
   try {
-    fetch('/.netlify/functions/airtable', {
+    fetch('/api/airtable', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({table: table, fields: fields})
@@ -1307,7 +1338,11 @@ function launchStripeCheckout() {
   if (btn) { btn.disabled = true; btn.textContent = 'Opening Stripe...'; }
   if (errEl) errEl.style.display = 'none';
 
-  fetch('/.netlify/functions/stripe-checkout', {
+  var addons_list = (result.selectedAddons || []).map(function(a) {
+    var labels = {fridge:'Fridge Cleaning +$30', oven:'Oven Cleaning +$30', laundry:'Laundry Service +$30', hour:'Extra Hour +$30'};
+    return labels[a] || a;
+  }).join(', ');
+  fetch('/api/stripe-checkout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -1315,9 +1350,10 @@ function launchStripeCheckout() {
   .then(function(r) { return r.json(); })
   .then(function(data) {
     if (data.url) {
-      // Save booking ref to use in confirmBooking after return
       window._bookingRef = bookingRef;
       window._bookingAmount = result.total;
+      // Save to Airtable BEFORE redirecting to Stripe
+      saveBookingToAirtable(service, result, addons_list, bookingRef, isCustom);
       window.location.href = data.url;
     } else if (data.error === 'custom') {
       if (errEl) { errEl.style.display = 'block'; errEl.textContent = data.message || 'This service requires a custom quote.'; }
@@ -1331,6 +1367,25 @@ function launchStripeCheckout() {
     if (errEl) { errEl.style.display = 'block'; errEl.textContent = 'Could not connect to payment system. Please try again or call (813) 400-3679.'; }
     if (btn) { btn.disabled = false; btn.innerHTML = '<span>&#128274;</span> Pay Securely &mdash; <span id="pay-btn-amount">' + formatMoney(result.total) + '</span>'; }
   });
+}
+
+// ── SAVE BOOKING TO AIRTABLE ──
+function saveBookingToAirtable(service, result, addons_list, bookingRef, isCustom) {
+  var fields = {
+    'First Name': gv('b-fname'), 'Last Name': gv('b-lname'),
+    'Name': (gv('b-fname') + ' ' + gv('b-lname')).trim(),
+    'Phone': gv('b-phone'), 'Email': gv('b-email'),
+    'Address': gv('b-address'), 'Area': gv('b-area'),
+    'Date': gv('b-date'), 'Time': gv('b-time'), 'Source': gv('b-source'),
+    'Service': service, 'Is Custom': isCustom ? 'Yes - Invoice Required' : 'No',
+    'Add-Ons': addons_list || 'None', 'Recurring': gv('b-recurring'),
+    'Notes': gv('b-notes'), 'Agreement Accepted': 'Yes',
+    'Amount Charged': result ? formatMoney(result.total) : 'Custom',
+    'Payment Status': isCustom ? 'Custom - Invoice Pending' : 'Payment Submitted - Awaiting Verification',
+    'Booking Ref': bookingRef || '',
+    'Submitted': new Date().toLocaleString()
+  };
+  atPost('Bookings', fields, function() {});
 }
 
 // ── CONFIRM BOOKING (called after returning from Stripe) ──
@@ -1512,8 +1567,219 @@ function processMsg(msg) {
   }
 }
 
+// ── ADMIN DASHBOARD ──
+var adminAllJobs = [];
+
+function loadAdminJobs() {
+  var weekEnd = document.getElementById('admin-week-end') ? document.getElementById('admin-week-end').value : '';
+  document.getElementById('admin-loading').style.display = 'block';
+  document.getElementById('admin-summary').style.display = 'none';
+  document.getElementById('admin-worker-breakdown').style.display = 'none';
+  document.getElementById('admin-jobs-container').style.display = 'none';
+  document.getElementById('admin-empty').style.display = 'none';
+
+  // Fetch from Airtable JobCompletions table
+  fetch('/api/airtable', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({action: 'list', table: 'JobCompletions'})
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    document.getElementById('admin-loading').style.display = 'none';
+    if (data.records) {
+      adminAllJobs = data.records.map(function(r) { return r.fields; });
+      filterAdminJobs();
+    } else {
+      document.getElementById('admin-empty').style.display = 'block';
+    }
+  })
+  .catch(function() {
+    document.getElementById('admin-loading').innerHTML = '<p style="color:var(--pink-d);font-weight:700;">Could not load jobs. Check your connection.</p>';
+  });
+}
+
+function filterAdminJobs() {
+  var workerFilter = (document.getElementById('admin-worker-filter') ? document.getElementById('admin-worker-filter').value : '').toLowerCase();
+  var statusFilter = document.getElementById('admin-status-filter') ? document.getElementById('admin-status-filter').value : '';
+  var paidFilter = document.getElementById('admin-paid-filter') ? document.getElementById('admin-paid-filter').value : '';
+
+  var filtered = adminAllJobs.filter(function(job) {
+    var wMatch = !workerFilter || (job['Worker Name'] || '').toLowerCase().indexOf(workerFilter) > -1;
+    var sMatch = !statusFilter || (job['Job Status'] || '') === statusFilter;
+    var pMatch = !paidFilter || (job['Paid'] || 'No') === paidFilter;
+    return wMatch && sMatch && pMatch;
+  });
+
+  renderAdminJobs(filtered);
+}
+
+function renderAdminJobs(jobs) {
+  if (jobs.length === 0) {
+    document.getElementById('admin-empty').style.display = 'block';
+    document.getElementById('admin-summary').style.display = 'none';
+    document.getElementById('admin-worker-breakdown').style.display = 'none';
+    document.getElementById('admin-jobs-container').style.display = 'none';
+    return;
+  }
+
+  document.getElementById('admin-empty').style.display = 'none';
+  document.getElementById('admin-summary').style.display = 'block';
+  document.getElementById('admin-worker-breakdown').style.display = 'block';
+  document.getElementById('admin-jobs-container').style.display = 'block';
+
+  // Calculate totals
+  var totalCollected = 0, workerMap = {};
+  jobs.forEach(function(job) {
+    var amt = parseFloat((job['Total Paid by Client'] || '0').toString().replace(/[^0-9.]/g, '')) || 0;
+    totalCollected += amt;
+    var wname = job['Worker Name'] || 'Unassigned';
+    if (!workerMap[wname]) workerMap[wname] = { jobs: 0, total: 0, unpaid: 0 };
+    workerMap[wname].jobs++;
+    workerMap[wname].total += amt * 0.65;
+    if ((job['Paid'] || 'No') === 'No' && (job['Verified'] || 'No') === 'Yes') {
+      workerMap[wname].unpaid += amt * 0.65;
+    }
+  });
+
+  document.getElementById('admin-total-jobs').textContent = jobs.length;
+  document.getElementById('admin-total-collected').textContent = '$' + totalCollected.toFixed(2);
+  document.getElementById('admin-business-cut').textContent = '$' + (totalCollected * 0.35).toFixed(2);
+  document.getElementById('admin-workers-owed').textContent = '$' + (totalCollected * 0.65).toFixed(2);
+
+  // Worker breakdown cards
+  var wCards = document.getElementById('admin-worker-cards');
+  wCards.innerHTML = '';
+  Object.keys(workerMap).forEach(function(wname) {
+    var w = workerMap[wname];
+    var card = document.createElement('div');
+    card.style.cssText = 'background:white;border-radius:14px;padding:16px;margin-bottom:10px;border:2px solid var(--pink-l);';
+    card.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">' +
+      '<div style="font-weight:700;color:var(--brown);font-size:14px;">' + wname + '</div>' +
+      '<div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--pink-d);">$' + w.total.toFixed(2) + '</div>' +
+      '</div>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+      '<span style="font-size:11px;background:var(--cream);padding:3px 10px;border-radius:20px;color:var(--gray);">' + w.jobs + ' jobs</span>' +
+      '<span style="font-size:11px;background:var(--yellow-l);border:1px solid var(--yellow-d);padding:3px 10px;border-radius:20px;color:var(--brown);font-weight:700;">Unpaid: $' + w.unpaid.toFixed(2) + '</span>' +
+      '</div>';
+    wCards.appendChild(card);
+  });
+
+  // Jobs list
+  var jList = document.getElementById('admin-jobs-list');
+  jList.innerHTML = '';
+  jobs.forEach(function(job) {
+    var amt = parseFloat((job['Total Paid by Client'] || '0').toString().replace(/[^0-9.]/g, '')) || 0;
+    var workerPay = (amt * 0.65).toFixed(2);
+    var bizFee = (amt * 0.35).toFixed(2);
+    var verified = job['Verified'] || 'No';
+    var paid = job['Paid'] || 'No';
+    var formSub = job['Completion Form Submitted'] || 'No';
+    var status = job['Job Status'] || 'Pending';
+
+    var card = document.createElement('div');
+    card.style.cssText = 'background:white;border-radius:12px;padding:14px;margin-bottom:8px;border:2px solid ' + (paid === 'Yes' ? 'var(--green)' : 'var(--pink-l)') + ';';
+    card.innerHTML =
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">' +
+      '<div><div style="font-weight:700;color:var(--brown);font-size:13px;">' + (job['Client Name'] || 'Unknown Client') + '</div>' +
+      '<div style="font-size:12px;color:var(--gray);">' + (job['Service Completed'] || '') + ' &bull; ' + (job['Date of Service'] || '') + '</div>' +
+      '<div style="font-size:12px;color:var(--pink-d);font-weight:700;margin-top:2px;">Worker: ' + (job['Worker Name'] || 'Unassigned') + '</div></div>' +
+      '<div style="text-align:right;">' +
+      '<div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--pink-d);">$' + amt.toFixed(2) + '</div>' +
+      '<div style="font-size:11px;color:var(--gray);">Worker: $' + workerPay + '</div>' +
+      '<div style="font-size:11px;color:var(--gray);">Business: $' + bizFee + '</div>' +
+      '</div></div>' +
+      '<div style="display:flex;gap:6px;flex-wrap:wrap;">' +
+      '<span style="font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700;background:' + (status==='Completed'?'var(--green-l)':'var(--yellow-l)') + ';color:' + (status==='Completed'?'var(--green)':'var(--brown)') + ';">' + status + '</span>' +
+      '<span style="font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700;background:' + (formSub==='Yes'?'var(--green-l)':'var(--pink-l)') + ';color:' + (formSub==='Yes'?'var(--green)':'var(--pink-d)') + ';">Form: ' + formSub + '</span>' +
+      '<span style="font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700;background:' + (verified==='Yes'?'var(--green-l)':'var(--cream-d)') + ';color:' + (verified==='Yes'?'var(--green)':'var(--gray)') + ';">Verified: ' + verified + '</span>' +
+      '<span style="font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700;background:' + (paid==='Yes'?'var(--green)':'var(--yellow)') + ';color:' + (paid==='Yes'?'white':'var(--brown)') + ';">Paid: ' + paid + '</span>' +
+      '</div>';
+    jList.appendChild(card);
+  });
+}
+
 window.onerror = function() { return true; };
 window.addEventListener('unhandledrejection', function(e) { e.preventDefault(); });
 </script>
+
+<!-- ADMIN DASHBOARD (hidden - not in nav) -->
+<div id="adminDash" class="page">
+  <div class="sec" style="background:linear-gradient(160deg,var(--cream),var(--yellow-l));">
+    <div class="stag">Internal - Admin Only</div>
+    <div class="sh">Weekly Pay <em>Dashboard</em></div>
+    <p class="ss" style="margin-bottom:20px;">Track completed jobs, worker pay, and weekly payouts. Filter and calculate every Friday.</p>
+
+    <!-- WEEK FILTER -->
+    <div class="form-card" style="margin-bottom:16px;">
+      <div class="fsec">Filter by Week</div>
+      <div class="frow">
+        <div class="fg"><label>Week Ending (Friday)</label><input type="date" id="admin-week-end" onchange="loadAdminJobs()"></div>
+        <div class="fg"><label>Filter by Worker</label><input type="text" id="admin-worker-filter" placeholder="Worker name..." oninput="filterAdminJobs()"></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>Status</label>
+          <select id="admin-status-filter" onchange="filterAdminJobs()">
+            <option value="">All</option>
+            <option value="Completed">Completed</option>
+            <option value="Pending">Pending</option>
+            <option value="Issue">Issue</option>
+          </select>
+        </div>
+        <div class="fg"><label>Paid?</label>
+          <select id="admin-paid-filter" onchange="filterAdminJobs()">
+            <option value="">All</option>
+            <option value="No">Unpaid</option>
+            <option value="Yes">Paid</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn-p" onclick="loadAdminJobs()">Load Jobs</button>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <div id="admin-summary" style="display:none;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+        <div style="background:white;border-radius:14px;padding:16px;border:2px solid var(--pink-l);text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Total Jobs</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--brown);" id="admin-total-jobs">0</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:16px;border:2px solid var(--pink-l);text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Total Collected</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--pink-d);" id="admin-total-collected">$0</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:16px;border:2px solid var(--green);text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Business (35%)</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--green);" id="admin-business-cut">$0</div>
+        </div>
+        <div style="background:white;border-radius:14px;padding:16px;border:2px solid var(--yellow-d);text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Workers Owed (65%)</div>
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--brown);" id="admin-workers-owed">$0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PER WORKER BREAKDOWN -->
+    <div id="admin-worker-breakdown" style="display:none;">
+      <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--brown);margin-bottom:12px;">Pay Per Worker This Week</div>
+      <div id="admin-worker-cards"></div>
+    </div>
+
+    <!-- JOBS TABLE -->
+    <div id="admin-jobs-container" style="display:none;">
+      <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--brown);margin:16px 0 12px;">All Jobs</div>
+      <div id="admin-jobs-list"></div>
+    </div>
+
+    <div id="admin-empty" style="display:none;text-align:center;padding:30px;background:white;border-radius:14px;border:2px solid var(--pink-l);">
+      <p style="font-size:14px;color:var(--gray);">No jobs found for the selected filters.</p>
+    </div>
+
+    <div id="admin-loading" style="text-align:center;padding:30px;">
+      <p style="font-size:14px;color:var(--gray);">Select a week and click Load Jobs to view payroll.</p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
