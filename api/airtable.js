@@ -1,5 +1,6 @@
 const AT_KEY  = process.env.AIRTABLE_KEY;
 const AT_BASE = process.env.AIRTABLE_BASE;
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -9,18 +10,16 @@ module.exports = async (req, res) => {
   const { table, fields, action } = req.body;
   if (!table) return res.status(400).json({ error: 'Missing table' });
   if (action === 'list') {
-    const url = `https://api.airtable.com/v0/${AT_BASE}/${encodeURIComponent(table)}?maxRecords=200&sort[0][field]=Submitted&sort[0][direction]=desc`;
-    const response = await fetch(url, { headers: { 'Authorization': `Bearer ${AT_KEY}` } });
-    const data = await response.json();
-    return res.status(200).json(data);
+    const url = `https://api.airtable.com/v0/${AT_BASE}/${encodeURIComponent(table)}?maxRecords=200`;
+    const r = await fetch(url, { headers: { 'Authorization': `Bearer ${AT_KEY}` } });
+    return res.status(200).json(await r.json());
   }
   if (!fields) return res.status(400).json({ error: 'Missing fields' });
   const url = `https://api.airtable.com/v0/${AT_BASE}/${encodeURIComponent(table)}`;
-  const response = await fetch(url, {
+  const r = await fetch(url, {
     method: 'POST',
     headers: { 'Authorization': `Bearer ${AT_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({ fields }),
   });
-  const data = await response.json();
-  return res.status(200).json(data);
+  return res.status(200).json(await r.json());
 };
