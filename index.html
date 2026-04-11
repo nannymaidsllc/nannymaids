@@ -280,8 +280,8 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     <button onclick="showPage('review')">Reviews</button>
       <button onclick="showPage('adminDash')">Admin</button>
     <button onclick="showPage('clientAgreement')">Agreement</button>
-    <button class="dn-work" onclick="showPage('worker')">Join Team</button>
-    <button class="dn-book" onclick="showPage('booking')">Book Now</button>
+    <!-- Join Team button hidden until provider signup ready -->
+    <button class="dn-book" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Now</button>
   </div>
   <button class="ham" id="ham" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
@@ -294,8 +294,8 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
   <button onclick="showPage('review')">Reviews</button>
       <button onclick="showPage('adminDash')">Admin</button>
   <button onclick="showPage('clientAgreement')">Client Agreement</button>
-  <button class="mn-book" onclick="showPage('booking')">Book Your Service Now</button>
-  <button class="mn-work" onclick="showPage('worker')">Apply to Join Our Team</button>
+  <button class="mn-book" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
+  <!-- Apply button hidden until provider signup ready -->
 </div>
 
 
@@ -314,8 +314,8 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     </div>
     <div class="urgency">&#9200; Limited availability &mdash; secure your spot today</div>
     <div class="hero-btns">
-      <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
-      <button class="btn-y" onclick="showPage('worker')">Apply to Join Our Team</button>
+      <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
+      <button class="btn-y" onclick="return false;" style="opacity:0.35;cursor:not-allowed;pointer-events:none;">Apply to Join Our Team</button>
     </div>
   </div>
   <div style="background:linear-gradient(135deg,var(--pink-l),var(--yellow-l));padding:40px 22px;border-bottom:3px solid var(--yellow-d);">
@@ -330,11 +330,11 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     <div class="stag">What We Offer</div>
     <div class="sh">Services Built Around <em>Your Life</em></div>
     <div class="svc-grid">
-      <div class="svc-card popular" onclick="showPage('booking')"><div class="pop-badge">Most Popular</div><span class="svc-icon">&#129529;</span><h3>Home Cleaning</h3><p>Basic, standard, and deep cleaning for Tampa families. One-time or recurring.</p><span class="svc-price">From $130</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#127968;</span><h3>Airbnb Turnover</h3><p>Fast and dependable turnover cleaning between every guest. Consistent results.</p><span class="svc-price">From $135</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128118;</span><h3>Childcare</h3><p>Background-checked, reference-verified caregivers matched to your family.</p><span class="svc-price">$30&ndash;$34/hr per child</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#129309;</span><h3>Companion Care</h3><p>Compassionate care for elderly clients who need support and daily check-ins.</p><span class="svc-price">$30&ndash;$34/hr</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128062;</span><h3>Pet Care</h3><p>Drop-in visits, dog walking, and overnight sitting for your pets.</p><span class="svc-price">From $25</span></div>
+      <div class="svc-card popular" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><div class="pop-badge">Most Popular</div><span class="svc-icon">&#129529;</span><h3>Home Cleaning</h3><p>Basic, standard, and deep cleaning for Tampa families. One-time or recurring.</p><span class="svc-price">From $130</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#127968;</span><h3>Airbnb Turnover</h3><p>Fast and dependable turnover cleaning between every guest. Consistent results.</p><span class="svc-price">From $135</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128118;</span><h3>Childcare</h3><p>Background-checked, reference-verified caregivers matched to your family.</p><span class="svc-price">$30&ndash;$34/hr per child</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#129309;</span><h3>Companion Care</h3><p>Compassionate care for elderly clients who need support and daily check-ins.</p><span class="svc-price">$30&ndash;$34/hr</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128062;</span><h3>Pet Care</h3><p>Drop-in visits, dog walking, and overnight sitting for your pets.</p><span class="svc-price">From $25</span></div>
     </div>
     <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
       <button class="btn-p" onclick="showPage('services')">View All Services</button>
@@ -374,7 +374,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <div class="review-card"><div class="rev-top"><div class="rev-av">D</div><div><div class="rev-name">Denise W.</div><div class="rev-loc">Wesley Chapel, FL</div></div><div class="rev-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div></div><p class="rev-text">"I needed someone for my mom and NannyMaids matched us perfectly. A true blessing."</p></div>
       <div class="review-card"><div class="rev-top"><div class="rev-av y">K</div><div><div class="rev-name">Keisha M.</div><div class="rev-loc">Riverview, FL</div></div><div class="rev-stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div></div><p class="rev-text">"Used NannyMaids for my Airbnb turnover and I am beyond impressed. Guests have been leaving 5-star reviews!"</p></div>
     </div>
-    <div style="margin-top:14px;"><button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button></div>
+    <div style="margin-top:14px;"><button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button></div>
   </div>
   <div class="sec" style="background:var(--cream-d);">
     <div class="stag">How It Works</div>
@@ -400,8 +400,8 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     <div class="sh" style="text-align:center;">Ready to get <em>started?</em></div>
     <p class="ss" style="text-align:center;margin-bottom:20px;">Whether you need help at home or want to join our care team.</p>
     <div style="display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
-      <button class="btn-o" style="border-color:var(--brown);color:var(--brown);" onclick="showPage('worker')">Apply to Join Our Team</button>
+      <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
+      <button class="btn-o" style="border-color:var(--brown);color:var(--brown);" onclick="return false;" style="opacity:0.35;cursor:not-allowed;pointer-events:none;">Apply to Join Our Team</button>
     </div>
   </div>
   <div class="trust-bar"><p>NannyMaids is a care coordination platform connecting families with independent, background-checked workers.<br>Full payment required at booking &bull; All services backed by our support team</p></div>
@@ -412,8 +412,8 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <button onclick="showPage('home')">Home</button>
       <button onclick="showPage('services')">Services</button>
       <button onclick="showPage('pricing')">Pricing</button>
-      <button onclick="showPage('booking')">Book Now</button>
-      <button onclick="showPage('worker')">Join Team</button>
+      <button onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Now</button>
+      <button onclick="return false;" style="opacity:0.35;cursor:not-allowed;pointer-events:none;">Join Team</button>
       <button onclick="showPage('about')">About</button>
       <button onclick="showPage('contact')">Contact</button>
       <button onclick="showPage('clientAgreement')">Client Agreement</button>
@@ -573,7 +573,6 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
             <span>&#128274;</span> Pay Securely &mdash; <span id="pay-btn-amount">$0</span>
           </button>
           <p style="font-size:11px;color:var(--gray);text-align:center;margin-top:8px;margin-bottom:16px;">You will be redirected to Stripe. Your card info is never stored by NannyMaids.</p>
-          <p style="font-size:11px;color:var(--gray);text-align:center;">Questions? Call or text <strong>(813) 400-3679</strong></p>
         </div>
 
         <div style="margin-top:10px;"><button class="btn-o" onclick="goStep(1)">&#8592; Back &amp; Edit</button></div>
@@ -711,7 +710,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     </div>
     <div class="form-card" id="review-success" style="display:none;">
       <div class="success-box"><span class="s-ic">&#128149;</span><h3>Thank You!</h3><p>Your feedback helps us serve more Tampa families.</p>
-        <div class="btns-col"><button class="btn-p" onclick="showPage('home')">Back to Home</button><button class="btn-y" onclick="showPage('booking')">Book Again</button></div>
+        <div class="btns-col"><button class="btn-p" onclick="showPage('home')">Back to Home</button><button class="btn-y" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Again</button></div>
       </div>
     </div>
   </div>
@@ -725,24 +724,24 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     <p class="ss" style="margin-bottom:20px;">Full payment required to confirm any booking. Custom services require a Stripe invoice.</p>
     <div style="font-family:serif;font-size:20px;font-weight:700;color:var(--brown);margin:20px 0 12px;">Cleaning Services</div>
     <div class="svc-grid">
-      <div class="svc-card popular" onclick="showPage('booking')"><div class="pop-badge">Most Popular</div><span class="svc-icon">&#129529;</span><h3>Basic Cleaning</h3><p>Light cleaning for smaller spaces. Perfect for regular maintenance.</p><span class="svc-price">From $130</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#129529;</span><h3>Standard Cleaning</h3><p>Full clean for 2-4 bedroom homes. Kitchen, bathrooms, bedrooms, living areas.</p><span class="svc-price">$170-$230</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#10024;</span><h3>Deep Cleaning</h3><p>Thorough detail-focused cleaning. Baseboards, inside appliances, heavy buildup removal.</p><span class="svc-price">From $240</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#127968;</span><h3>Airbnb Turnover</h3><p>Fast and dependable turnover cleaning for Tampa hosts. Consistent results every time.</p><span class="svc-price">$135-$200</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128230;</span><h3>Move-In Cleaning</h3><p>Get your new home spotless before you move in.</p><span class="custom-badge">Custom Quote Required</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128682;</span><h3>Move-Out Cleaning</h3><p>Leave your old home in perfect condition for the next occupant.</p><span class="custom-badge">Custom Quote Required</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128295;</span><h3>Post-Construction / Post-Renovation</h3><p>Heavy-duty cleanup after construction or renovation work.</p><span class="custom-badge">Custom Quote Required</span></div>
+      <div class="svc-card popular" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><div class="pop-badge">Most Popular</div><span class="svc-icon">&#129529;</span><h3>Basic Cleaning</h3><p>Light cleaning for smaller spaces. Perfect for regular maintenance.</p><span class="svc-price">From $130</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#129529;</span><h3>Standard Cleaning</h3><p>Full clean for 2-4 bedroom homes. Kitchen, bathrooms, bedrooms, living areas.</p><span class="svc-price">$170-$230</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#10024;</span><h3>Deep Cleaning</h3><p>Thorough detail-focused cleaning. Baseboards, inside appliances, heavy buildup removal.</p><span class="svc-price">From $240</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#127968;</span><h3>Airbnb Turnover</h3><p>Fast and dependable turnover cleaning for Tampa hosts. Consistent results every time.</p><span class="svc-price">$135-$200</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128230;</span><h3>Move-In Cleaning</h3><p>Get your new home spotless before you move in.</p><span class="custom-badge">Custom Quote Required</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128682;</span><h3>Move-Out Cleaning</h3><p>Leave your old home in perfect condition for the next occupant.</p><span class="custom-badge">Custom Quote Required</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128295;</span><h3>Post-Construction / Post-Renovation</h3><p>Heavy-duty cleanup after construction or renovation work.</p><span class="custom-badge">Custom Quote Required</span></div>
     </div>
     <div style="font-family:serif;font-size:20px;font-weight:700;color:var(--brown);margin:28px 0 12px;">Care Services <span style="font-size:14px;color:var(--gray);font-family:'Nunito',sans-serif;font-weight:600;">(Hourly)</span></div>
     <div class="svc-grid">
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128118;</span><h3>Nanny / Childcare</h3><p>Background-checked, reference-verified caregivers matched to your family.</p><span class="svc-price">$30-$34/hr per child</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#129309;</span><h3>Companion Care</h3><p>Compassionate care for elderly clients. Medication reminders, conversation, check-ins.</p><span class="svc-price">$30-$34/hr</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128118;</span><h3>Nanny / Childcare</h3><p>Background-checked, reference-verified caregivers matched to your family.</p><span class="svc-price">$30-$34/hr per child</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#129309;</span><h3>Companion Care</h3><p>Compassionate care for elderly clients. Medication reminders, conversation, check-ins.</p><span class="svc-price">$30-$34/hr</span></div>
     </div>
     <div style="font-family:serif;font-size:20px;font-weight:700;color:var(--brown);margin:28px 0 12px;">Pet Care Services</div>
     <div class="svc-grid">
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128062;</span><h3>Pet Drop-In / Feeding</h3><p>30-minute check-in, feeding, and companionship for your pet while you are away.</p><span class="svc-price">$25-$35</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#128054;</span><h3>Dog Walking</h3><p>30-minute walk with a trusted, reliable worker in your area.</p><span class="svc-price">$25-$30</span></div>
-      <div class="svc-card" onclick="showPage('booking')"><span class="svc-icon">&#127769;</span><h3>Overnight Pet Sitting</h3><p>Your pet stays home in their own environment while you are away overnight.</p><span class="svc-note">Subject to worker availability.</span><span class="svc-price">$75-$110</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128062;</span><h3>Pet Drop-In / Feeding</h3><p>30-minute check-in, feeding, and companionship for your pet while you are away.</p><span class="svc-price">$25-$35</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#128054;</span><h3>Dog Walking</h3><p>30-minute walk with a trusted, reliable worker in your area.</p><span class="svc-price">$25-$30</span></div>
+      <div class="svc-card" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')"><span class="svc-icon">&#127769;</span><h3>Overnight Pet Sitting</h3><p>Your pet stays home in their own environment while you are away overnight.</p><span class="svc-note">Subject to worker availability.</span><span class="svc-price">$75-$110</span></div>
     </div>
     <div style="background:var(--yellow-l);border:1.5px solid var(--yellow-d);border-radius:14px;padding:16px;margin-top:24px;text-align:center;">
       <p style="font-size:14px;font-weight:700;color:var(--brown);margin-bottom:6px;">Need a custom service?</p>
@@ -750,7 +749,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <button class="btn-p" style="width:auto;padding:11px 24px;" onclick="showPage('contact')">Request a Custom Quote</button>
     </div>
     <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
+      <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
       <button class="btn-y" onclick="showPage('pricing')">View Full Pricing</button>
     </div>
   </div>
@@ -776,7 +775,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <div class="why-card"><div class="why-icon">&#128155;</div><div><div class="why-title">Care is Everything</div><div class="why-sub">Whether it's a clean home or a companion &mdash; we treat every client like family.</div></div></div>
     </div>
     <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
+      <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
       <button class="btn-o" style="border-color:var(--brown-l);color:var(--brown);" onclick="showPage('contact')">Get In Touch</button>
     </div>
   </div>
@@ -816,8 +815,8 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <div id="cf-success" style="display:none;text-align:center;padding:24px 12px;"><span style="font-size:44px;display:block;margin-bottom:12px;">&#128140;</span><div style="font-family:serif;font-size:20px;color:var(--cream);margin-bottom:8px;">Message Received!</div><p style="font-size:13px;color:rgba(253,246,238,0.6);line-height:1.7;">We will get back to you within a few hours.</p></div>
     </div>
     <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
-      <button class="btn-y" onclick="showPage('worker')">Apply to Join Our Team</button>
+      <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
+      <button class="btn-y" onclick="return false;" style="opacity:0.35;cursor:not-allowed;pointer-events:none;">Apply to Join Our Team</button>
     </div>
   </div>
 </div>
@@ -872,7 +871,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
     <div class="addon-row"><div class="addon-info"><span style="font-size:18px;">&#128085;</span><div><div class="addon-name">Laundry Service</div></div></div><span class="addon-price-lbl">+$30</span></div>
     <div class="addon-row"><div class="addon-info"><span style="font-size:18px;">&#9200;</span><div><div class="addon-name">Extra Hour</div></div></div><span class="addon-price-lbl">+$30</span></div>
     <div style="background:var(--cream-d);border-radius:12px;padding:12px 16px;margin:16px 0;text-align:center;"><p style="font-size:12px;color:var(--gray);font-style:italic;">Pricing based on home size, condition, and scope of work. All prices include processing fees. Final pricing may vary.</p></div>
-    <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
+    <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
   </div>
 </div>
 
@@ -898,7 +897,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <div style="background:var(--yellow-l);border:1.5px solid var(--yellow-d);border-radius:10px;padding:12px;margin-top:12px;text-align:center;"><p style="font-size:13px;font-weight:700;color:var(--brown);">By booking, you agree to all terms above.</p></div>
     </div>
     <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button>
+      <button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button>
       <button class="btn-o" onclick="showPage('home')">Back to Home</button>
     </div>
   </div>
@@ -929,7 +928,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <div class="policy-row"><div class="pdot">&#10003;</div><p>Report concerns within <strong>24 hours</strong> of service completion.</p></div>
       <div class="policy-row"><div class="pdot">&#10003;</div><p>We will work toward a fair resolution.</p></div>
     </div>
-    <div style="margin-top:16px;"><button class="btn-p" onclick="showPage('booking')">Book Your Service Now</button></div>
+    <div style="margin-top:16px;"><button class="btn-p" onclick="window.open('https://nannymaids.bookingkoala.com/','_blank')">Book Your Service Now</button></div>
   </div>
 </div>
 
@@ -997,7 +996,7 @@ footer hr{border:none;border-top:1px solid rgba(253,246,238,0.08);margin:12px 0;
       <div style="background:var(--yellow-l);border:1.5px solid var(--yellow-d);border-radius:10px;padding:12px;margin-top:12px;"><p style="font-size:12px;color:var(--brown-l);line-height:1.8;">Worker Name: ______________________<br>Date: ______________________<br>Signature: ______________________</p></div>
     </div>
     <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px;">
-      <button class="btn-p" onclick="showPage('worker')">Apply to Join the Team</button>
+      <button class="btn-p" onclick="return false;" style="opacity:0.35;cursor:not-allowed;pointer-events:none;">Apply to Join the Team</button>
       <button class="btn-o" onclick="showPage('workerPolicy')">Back to Worker Policy</button>
     </div>
   </div>
@@ -1419,7 +1418,7 @@ function confirmBooking() {
 // Check if returning from Stripe success
 (function checkStripeReturn() {
   if (window.location.search.indexOf('booking=success') > -1) {
-    showPage('booking');
+    window.open('https://nannymaids.bookingkoala.com/','_blank');
     goStep(3);
     // Clean URL
     history.replaceState({}, '', window.location.pathname);

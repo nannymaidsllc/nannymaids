@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/airtable", "destination": "/api/airtable" },
-    { "source": "/api/stripe-checkout", "destination": "/api/stripe-checkout" }
+    { "source": "/.netlify/functions/airtable", "destination": "/api/airtable" },
+    { "source": "/.netlify/functions/stripe-checkout", "destination": "/api/stripe-checkout" }
   ]
 }
